@@ -1,0 +1,120 @@
+/* Styles for Frontend Mentor Product Preview Card component Challenge */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Set color variables */
+    /* Primary colors*/
+    --clr-dark-cyan: hsl(158, 36%, 37%);
+    --clr-cream: hsl(30, 38%, 92%);
+
+    /* Neutral colors */
+    --clr-very-dark-blue: hsl(212, 21%, 14%);
+    --clr-dark-grayish-blue: hsl(228, 12%, 48%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    /* font family */
+    --ff-montserrat: 'Montserrat', sans-serif;
+    --ff-fraunces: 'Fraunces', serif;
+}
+
+body {
+    font-family: var(--ff-montserrat);
+    font-size: 14px;
+    background: var(--clr-cream);
+    width: 100%;
+    color: var(--clr-dark-grayish-blue);
+}
+main {
+    display: grid;
+    grid-template-columns: auto;
+    height: 100vh;
+    place-content: center;
+}
+.product {
+    background: var(--clr-white);
+    min-width: 345px;
+    max-width: 600px;
+    margin: 2rem;
+    border-radius: 10px;
+    display: grid;
+    place-content: center;
+
+}
+
+img {
+    max-width: 100%;
+}
+.product .product-image img {
+    border-radius: 10px 10px 0 0;
+}
+.product-info {
+    padding: 1rem 1.5rem;
+}
+
+.category {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+
+.product-name {
+    font-family: var(--ff-fraunces);
+    font-weight: 700;
+    font-size:xx-large;
+    color: var(--clr-very-dark-blue);
+    padding: 1.2rem 0;
+    line-height: 2rem;
+}
+
+.flex-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.curr-price {
+    font-family: 'Fraunces';
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--clr-dark-cyan);
+}
+
+p {
+    line-height: 1.5rem;
+    padding-bottom: 1rem;
+}
+.cart {
+    display: block;
+    width: 100%;
+    padding: 1rem 25px;
+    border: none;
+    background-color: var(--clr-dark-cyan);
+    color: var(--clr-white);
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* .cart[data-icon="shopping-cart"]::before {
+    content: " ";
+    width: 15px;
+    height: 16px;
+    background: red;
+
+} */
+@media (min-width: 600px) {
+    .product {
+        grid-template-columns: 1fr 1fr;
+    }
+    .product .product-image {
+        background-image: url(./images/image-product-desktop.jpg);
+        object-fit: contain;
+    }
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
