@@ -100,13 +100,6 @@ p {
     cursor: pointer;
 }
 
-/* .cart[data-icon="shopping-cart"]::before {
-    content: " ";
-    width: 15px;
-    height: 16px;
-    background: red;
-
-} */
 @media (min-width: 600px) {
     .product {
         grid-template-columns: 1fr 1fr;
